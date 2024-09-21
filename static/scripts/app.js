@@ -20,7 +20,7 @@ const loader = () => {
                 ele.innerText = value.slice(0, iterations) + letters[Math.floor(Math.random() * 26)];
             }
             letterIntervalCount++;
-        }, 25);
+        }, 35);
         
         ele.innerText = value.slice(0, iterations) + value[iterations];
         
