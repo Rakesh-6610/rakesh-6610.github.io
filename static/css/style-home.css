@@ -50,20 +50,60 @@ body {
 
 .spinner {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 56px;
-    height: 56px;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    border: 9px solid;
+    border: 3px solid;
     border-color: rgba(221, 221, 240, 0);
     border-right-color: #474bff;
-    animation: spinner-d3wgkg 1s infinite linear;
+    animation: spinner-rotate 1s infinite linear;
     z-index: 999999;
- }
+    transition: 0.25s;
+    transform-origin: center;
+    /* scale: 0.1; */
+}
  
-@keyframes spinner-d3wgkg {
+@keyframes spinner-rotate {
     to {
     transform: rotate(1turn);
     }
+}
+
+
+.social-icons {
+    position: fixed;
+    bottom: 39.5px;
+    right: 32px;
+    z-index: 99999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: var(--primary-text);
+    font-size: 20px;
+    transition: 0.25s;
+    cursor: pointer;
+    transition: 0.25S;
+    scale: 0;
+    transform-origin: center;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+
+.social-icons .line {
+    width: 2px;
+    height: 0px;
+    background-color: var(--primary-text);
+    opacity: 0.8;
+    border-radius: 10px;
 }

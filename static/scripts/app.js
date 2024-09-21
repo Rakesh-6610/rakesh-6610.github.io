@@ -1,7 +1,3 @@
-
-
-
-
 const loader = () => {
     const letters = "abcdefghijklmnopqrstuvwxyz";
     let ele = document.querySelector(".loader-text");
@@ -30,10 +26,35 @@ const loader = () => {
 
     const loaderWindow = (ele) => {
         setTimeout(() => {
-            $(ele).css("transition", "opacity 0.25s ease-out");
-            $(ele).css("opacity", "0");
-            $(".loader-bg").css("transition", "height 0.25s ease-out");
-            $(".loader-bg").css("height", "0%")
+            $(ele).fadeOut("fast")
+            $(".loader-bg").slideUp(350, () => {
+                $(".loader-bg").css("display", "none");
+                $(".spinner").animate({
+                    scale: 0
+                }, () => {
+                    $(".spinner").css("display", "none");
+                    $(".loader").css("display", "none");
+                    $(".social-icons .line").animate({
+                        height: "80px"
+                    }, () => {
+                        $(".social-icons a:nth-child(4)").animate({
+                            scale: 1
+                        }, "fast" , () => {
+                            $(".social-icons a:nth-child(3)").animate({
+                                scale: 1
+                            }, "fast" , () => {
+                                $(".social-icons a:nth-child(2)").animate({
+                                    scale: 1
+                                }, "fast" , () => {
+                                    $(".social-icons a:nth-child(1)").animate({
+                                        scale: 1
+                                    }, "fast")
+                                })
+                            })
+                        })
+                    })
+                })
+            })
         }, 180)
     }
 }
@@ -43,4 +64,4 @@ const loader = () => {
 
 
 
-document.onload = loader()
+$(document).ready(loader)
