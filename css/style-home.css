@@ -18,6 +18,8 @@ body {
     width: 100%;
     height: 100svh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--bg);
 
 }
@@ -144,7 +146,7 @@ body {
 /* --------------------------- nav bar ----------------------------------- */
 
 
-header {
+menu {
     width: 100vw;
     height: 5.5rem;
     display: flex;
@@ -249,4 +251,31 @@ nav {
 
 .middle a.active {
     opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------- hero part starts here -------------------------- */
+
+
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+
+header {
+    
 }
