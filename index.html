@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div class="top-ball"></div>
     <section class="loader">
         <h2 data-value = "Hello there" class="loader-text">Hello There</h2>
         <div class="loader-bg"></div>
@@ -54,26 +55,41 @@
 
     <header>
         <nav>
-            <div class="left">
-                <h2>Rakesh Karmaker</h2>
+            <div class="top">
+                <img src="./images/profile.jpg" alt="Rakesh Karmaker's profile picture">
+                <a href="#">Rakesh</a>
             </div>
 
-            <ul class="right">
+            <ul class="middle">
                 <li>
-                    <a href="#" class="about-me">About me</a>
+                    <a href="#" class="home active">
+                        <p>Home</p>
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="about-me">
+                        <p>About me</p>
+                        <i class="fa-solid fa-user"></i>
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#" class="projects">Projects</a>
+                    <a href="#" class="projects">
+                        <p>Projects</p>
+                        <i class="fa-solid fa-briefcase"></i>
+                    </a>
                 </li>
                 <li>
-                    <a href="#" class="testimonials">Testimonials</a>
-                </li>
-                <li>
-                    <a href="#" class="contact">Contact</a>
+                    <a href="#" class="contact">
+                        <p>Contact</p>
+                        <i class="fa-regular fa-comments"></i>
+                    </a>
                 </li>
             </ul>
 
+
+            <!-- <div class="bottom"></div> -->
         </nav>
     </header>
 

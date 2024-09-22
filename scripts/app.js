@@ -36,26 +36,28 @@ const loader = () => {
                     $(".loader").css("display", "none");
                     $(".social-icons .line").animate({
                         height: "80px"
-                    }, () => {
-                        $(".social-icons a:nth-child(4)").animate({
-                            scale: 1
-                        }, "fast" , () => {
-                            $(".social-icons a:nth-child(3)").animate({
-                                scale: 1
-                            }, "fast" , () => {
-                                $(".social-icons a:nth-child(2)").animate({
-                                    scale: 1
-                                }, "fast" , () => {
-                                    $(".social-icons a:nth-child(1)").animate({
-                                        scale: 1
-                                    }, "fast")
-                                })
-                            })
-                        })
-                    })
+                    }, socialIcons)
                 })
             })
         }, 180)
+    }
+
+    const socialIcons = () => {
+        $(".social-icons a:nth-child(4)").animate({
+            scale: 1
+        }, "fast" , () => {
+            $(".social-icons a:nth-child(3)").animate({
+                scale: 1
+            }, "fast" , () => {
+                $(".social-icons a:nth-child(2)").animate({
+                    scale: 1
+                }, "fast" , () => {
+                    $(".social-icons a:nth-child(1)").animate({
+                        scale: 1
+                    }, "fast")
+                })
+            })
+        })
     }
 }
 
