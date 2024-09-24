@@ -42,7 +42,7 @@ const loader = () => {
         }, 180)
     }
 
-    const socialIcons = () => {
+    const socialIcons = () => {;
         $(".social-icons a:nth-child(4)").animate({
             scale: 1
         }, "fast" , () => {
@@ -79,9 +79,7 @@ const techs = () => {
 
     }
 }
-
-techs()
-
+techs();
 
 
 
