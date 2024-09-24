@@ -407,23 +407,44 @@ header {
     font-weight: 450;
 }
 
+.scroll {
+    max-width: 1000px;
+}
+
+
 .techs {
     padding-block: 1rem;
-    list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
-    max-width: 1000px;
-    overflow: hidden;
-    -webkit-mask: linear-gradient(90deg, transparent,var(--bg) 20%,var(--bg) 80%,transparent);
-    mask: linear-gradient(90deg, transparent, var(--bg) 20%, var(--bg) 80%, transparent);
+    list-style: none;
 }
 
 .techs li {
-    width: max-content;
     padding: 1rem 0.8rem;
     border-radius: 10px;
     background-color: var(--secondary-bg);
     color: var(--primary-text);
     font-size: 1rem;
     box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+}
+
+
+.scroll[data-animated = "true"]{
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent,var(--bg) 20%,var(--bg) 80%,transparent);
+    mask: linear-gradient(90deg, transparent, var(--bg) 20%, var(--bg) 80%, transparent);
+}
+
+
+.scroll[data-animated = "true"] .techs {
+    flex-wrap: nowrap;
+    width: max-content;
+    animation: scroll var(--scroll-duration, 20s) linear forwards infinite;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
 }

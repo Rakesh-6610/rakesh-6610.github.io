@@ -61,6 +61,26 @@ const loader = () => {
     }
 }
 
+const techs = () => {
+    const container = document.querySelector(".scroll");
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        container.setAttribute("data-animated", true);
+        
+        const scrollInner = document.querySelector(".techs");
+        const scrollContent = Array.from(scrollInner.children);
+        // console.log(scrollContent);
+
+        scrollContent.forEach((item) => {
+            console.log(item);
+            const content = item.cloneNode(true);;
+            scrollInner.appendChild(content);
+        })
+
+    }
+}
+
+techs()
 
 
 
